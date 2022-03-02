@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
- <script src="dadosNave.js" type="module" ></script>
+  <script src="javascript/app.js"></script>
+  <script src="javascript/imovel.js"></script>
+  <script src="javascript/main.js"></script>
+
+
+  <form onsubmit="app.addProperties()" >
+    <p>
+      <label for="type">Tipo: </label>
+      <select name="type">
+        <option value=></option>
+        <option value="rent">Casa</option>
+        <option value="sale">Apartamento</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="area">Area: </label>
+      <input type="text" id="area">
+    </p>
+
+    <p>
+      <input type="checkbox" name="rented" /> Alugado
+
+    </p>
+
+  </form>
+
+  <button type="submit">Enviar</button>
+  <button type="button" onclick="app.cleanForm()">Limpar</button>
+
+
+
+  <h3>Imóveis Cadastrados</h3>
+
+  <ul id="properties"></ul>
 </body>
+
 </html>
